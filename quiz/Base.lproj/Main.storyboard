@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7Y7-bw-0Di">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Quiz-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="QA" customModuleProvider="target" sceneMemberID="viewController">
@@ -60,6 +60,7 @@
                             <constraint firstItem="X2j-iw-pGG" firstAttribute="top" secondItem="020-Ts-mmh" secondAttribute="bottom" constant="8" id="mri-t5-mdd"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Quiz" id="He2-qW-rRj"/>
                     <connections>
                         <outlet property="answerLabel" destination="F2M-Pa-fm2" id="FgM-KG-mpB"/>
                         <outlet property="questionLabel" destination="020-Ts-mmh" id="gII-ER-AIU"/>
@@ -67,7 +68,97 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="23" y="72"/>
+            <point key="canvasLocation" x="161" y="72"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="OkJ-XA-6cE">
+            <objects>
+                <viewController id="7Y7-bw-0Di" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wSi-zH-SPi"/>
+                        <viewControllerLayoutGuide type="bottom" id="3Hn-4R-R6O"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UrG-Ep-tRF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to the Quiz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aSJ-Rc-6ej">
+                                <rect key="frame" x="107" y="80" width="160" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Obn-4c-lrk">
+                                <rect key="frame" x="152.5" y="158" width="69" height="30"/>
+                                <state key="normal" title="Start Quiz"/>
+                                <connections>
+                                    <segue destination="UMj-4Q-zbt" kind="modal" id="YWF-ng-PSv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aSJ-Rc-6ej" firstAttribute="centerX" secondItem="UrG-Ep-tRF" secondAttribute="centerX" id="Hzn-gJ-Afx"/>
+                            <constraint firstItem="Obn-4c-lrk" firstAttribute="centerX" secondItem="aSJ-Rc-6ej" secondAttribute="centerX" id="LQq-ef-UhE"/>
+                            <constraint firstItem="Obn-4c-lrk" firstAttribute="top" secondItem="aSJ-Rc-6ej" secondAttribute="bottom" constant="57" id="eho-CX-IfZ"/>
+                            <constraint firstItem="aSJ-Rc-6ej" firstAttribute="top" secondItem="wSi-zH-SPi" secondAttribute="bottom" constant="60" id="pH4-gj-XZy"/>
+                            <constraint firstItem="3Hn-4R-R6O" firstAttribute="top" secondItem="Obn-4c-lrk" secondAttribute="bottom" constant="479" id="vgH-j4-V95"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H6R-xC-Qa5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-807" y="72"/>
+        </scene>
+        <!--Add Questions-->
+        <scene sceneID="lPO-XS-cf3">
+            <objects>
+                <viewController id="6sz-Wa-6Td" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2mP-ya-tjR"/>
+                        <viewControllerLayoutGuide type="bottom" id="HI8-tc-ETh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dCv-XQ-4gA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Questions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uHh-7d-UTK">
+                                <rect key="frame" x="131" y="59" width="113" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HI8-tc-ETh" firstAttribute="top" secondItem="uHh-7d-UTK" secondAttribute="bottom" constant="538" id="PJt-AZ-dau"/>
+                            <constraint firstItem="uHh-7d-UTK" firstAttribute="centerX" secondItem="dCv-XQ-4gA" secondAttribute="centerX" id="Pcp-st-hYU"/>
+                            <constraint firstItem="uHh-7d-UTK" firstAttribute="top" secondItem="2mP-ya-tjR" secondAttribute="bottom" constant="39" id="zEI-Go-hJY"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Add Questions" id="oMz-OH-DqJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5t5-CJ-PV4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="161" y="777"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="i2z-1M-cbJ">
+            <objects>
+                <tabBarController id="UMj-4Q-zbt" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="VRB-gG-2xq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="I3B-5r-6Iz"/>
+                        <segue destination="6sz-Wa-6Td" kind="relationship" relationship="viewControllers" id="5lG-LB-L27"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mGJ-ne-NF8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-807" y="777"/>
         </scene>
     </scenes>
 </document>
