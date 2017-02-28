@@ -3,7 +3,7 @@
 //  quiz
 //
 //  Created by Alex Louzao on 2-28-17.
-//  Copyright © 2016 CSC. All rights reserved.
+//  Copyright © 2017 CSC. All rights reserved.
 //
 
 import UIKit
@@ -40,7 +40,6 @@ class ViewController: UIViewController {
         questionLabel.text = questions[currentQuestionIndex]
     }
     
-
 
 }
 

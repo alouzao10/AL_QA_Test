@@ -89,7 +89,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Obn-4c-lrk">
-                                <rect key="frame" x="152.5" y="158" width="69" height="30"/>
+                                <rect key="frame" x="153" y="158" width="69" height="30"/>
                                 <state key="normal" title="Start Quiz"/>
                                 <connections>
                                     <segue destination="UMj-4Q-zbt" kind="modal" id="YWF-ng-PSv"/>
@@ -98,11 +98,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="aSJ-Rc-6ej" firstAttribute="centerX" secondItem="UrG-Ep-tRF" secondAttribute="centerX" id="Hzn-gJ-Afx"/>
-                            <constraint firstItem="Obn-4c-lrk" firstAttribute="centerX" secondItem="aSJ-Rc-6ej" secondAttribute="centerX" id="LQq-ef-UhE"/>
-                            <constraint firstItem="Obn-4c-lrk" firstAttribute="top" secondItem="aSJ-Rc-6ej" secondAttribute="bottom" constant="57" id="eho-CX-IfZ"/>
-                            <constraint firstItem="aSJ-Rc-6ej" firstAttribute="top" secondItem="wSi-zH-SPi" secondAttribute="bottom" constant="60" id="pH4-gj-XZy"/>
-                            <constraint firstItem="3Hn-4R-R6O" firstAttribute="top" secondItem="Obn-4c-lrk" secondAttribute="bottom" constant="479" id="vgH-j4-V95"/>
+                            <constraint firstItem="Obn-4c-lrk" firstAttribute="centerX" secondItem="UrG-Ep-tRF" secondAttribute="centerX" id="KSS-qn-Ayq"/>
+                            <constraint firstItem="Obn-4c-lrk" firstAttribute="top" secondItem="aSJ-Rc-6ej" secondAttribute="bottom" constant="57" id="PSO-Ke-ITS"/>
+                            <constraint firstItem="aSJ-Rc-6ej" firstAttribute="centerX" secondItem="UrG-Ep-tRF" secondAttribute="centerX" id="dct-ET-mMq"/>
+                            <constraint firstItem="aSJ-Rc-6ej" firstAttribute="top" secondItem="wSi-zH-SPi" secondAttribute="bottom" constant="60" id="n6e-t3-RBX"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -122,25 +121,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Questions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uHh-7d-UTK">
-                                <rect key="frame" x="131" y="59" width="113" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add New Questions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uHh-7d-UTK">
+                                <rect key="frame" x="112" y="119" width="152" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter New Question" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rn9-Dg-EiH">
+                                <rect key="frame" x="119" y="148" width="137" height="21"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter New Answer" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3rD-KY-Rrf">
+                                <rect key="frame" x="124" y="191" width="127" height="21"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0z1-da-CSD">
+                                <rect key="frame" x="142" y="252" width="92" height="30"/>
+                                <state key="normal" title="Add New Q/A"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="HI8-tc-ETh" firstAttribute="top" secondItem="uHh-7d-UTK" secondAttribute="bottom" constant="538" id="PJt-AZ-dau"/>
-                            <constraint firstItem="uHh-7d-UTK" firstAttribute="centerX" secondItem="dCv-XQ-4gA" secondAttribute="centerX" id="Pcp-st-hYU"/>
-                            <constraint firstItem="uHh-7d-UTK" firstAttribute="top" secondItem="2mP-ya-tjR" secondAttribute="bottom" constant="39" id="zEI-Go-hJY"/>
+                            <constraint firstItem="0z1-da-CSD" firstAttribute="top" secondItem="3rD-KY-Rrf" secondAttribute="bottom" constant="40" id="2ps-uH-LV1"/>
+                            <constraint firstItem="3rD-KY-Rrf" firstAttribute="centerX" secondItem="dCv-XQ-4gA" secondAttribute="centerX" id="KB8-Ws-drz"/>
+                            <constraint firstItem="uHh-7d-UTK" firstAttribute="centerX" secondItem="dCv-XQ-4gA" secondAttribute="centerX" id="WYG-Yi-Qod"/>
+                            <constraint firstItem="3rD-KY-Rrf" firstAttribute="top" secondItem="rn9-Dg-EiH" secondAttribute="bottom" constant="22" id="dXb-hl-kX5"/>
+                            <constraint firstItem="uHh-7d-UTK" firstAttribute="top" secondItem="2mP-ya-tjR" secondAttribute="bottom" constant="99" id="hdx-ff-5K8"/>
+                            <constraint firstItem="rn9-Dg-EiH" firstAttribute="top" secondItem="uHh-7d-UTK" secondAttribute="bottom" constant="8" id="lMS-Iv-u4G"/>
+                            <constraint firstItem="0z1-da-CSD" firstAttribute="centerX" secondItem="dCv-XQ-4gA" secondAttribute="centerX" id="uxc-yI-ZeF"/>
+                            <constraint firstItem="rn9-Dg-EiH" firstAttribute="centerX" secondItem="dCv-XQ-4gA" secondAttribute="centerX" id="yd8-Ti-h4D"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Add Questions" id="oMz-OH-DqJ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5t5-CJ-PV4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="161" y="777"/>
+            <point key="canvasLocation" x="160.80000000000001" y="776.76161919040487"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="i2z-1M-cbJ">
