@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  quiz
 //
-//  Created by _____________ on ____________.
+//  Created by Alex Louzao on 2-28-17.
 //  Copyright © 2016 CSC. All rights reserved.
 //
 
