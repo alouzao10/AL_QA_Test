@@ -8,16 +8,20 @@
 
 import UIKit
 
-class ViewController: UIViewController {
 
+class ViewController: UIViewController {
+    
     @IBOutlet var questionLabel: UILabel!
     @IBOutlet var answerLabel: UILabel!
     
-    let questions: [String] = ["From what is cognac is made?" ,
-                               "What is 7+7?",
+    /*@IBOutlet*/ var newQ: String!
+    /*@IBOutlet*/ var newA: String!
+    
+    
+    var questions: [String] = ["From what is cognac is made?", "What is 7+7?",
                                "What is the capital of Vermont"]
     
-    let answers: [String] = ["Grapes","14","Montpelier"]
+    var answers: [String] = ["Grapes","14","Montpelier"]
     
     var currentQuestionIndex: Int = 0
     
@@ -28,6 +32,9 @@ class ViewController: UIViewController {
         }
         questionLabel.text = questions[currentQuestionIndex]
         answerLabel.text = "???"
+        for i in questions{
+            print("\(i)")
+        }
     }
     
     @IBAction func showAnswer(_ sender: UIButton) {
@@ -35,35 +42,63 @@ class ViewController: UIViewController {
         answerLabel.text = answer
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        //questionLabel.text = questions[currentQuestionIndex]
-    }
+    /*override func viewDidLoad() {
+        //super.viewDidLoad()
+        for i in questions{
+            print("\(i)")
+        }
+       // questionLabel.text = questions[currentQuestionIndex]
+    }*/
     
     
 //==================================================================
     
-    @IBOutlet var newQ: String!
-    @IBOutlet var newA: String!
-    
+    //var otherView = newQuestionAnswer()
     
     @IBAction func getQuestion(_ textField: UITextField){
         newQ = textField.text
+        if newQ == ""{
+            newQ = nil
+        }
         print("In new Question ViewCon: \(newQ)")
     }
     
     @IBAction func getAnswer(_ textField: UITextField){
         newA = textField.text
+        if newA == ""{
+            newA = nil
+        }
         print("In new Answer ViewCon: \(newA)")
     }
     
-    @IBAction func setQandA(_ sender: UIButton){
-
+    // Set the tag of each text field to different values
+    // Find a way to clear the text field after press and after addition
+    
+    
+    // let newQuestion set the new question and answer
+    // have simple function here to append the new values
+    
+    
+    
+    @IBAction func setQandANew(_ sender: UIButton){
+        //newQ = otherView.newQ
+        //newA = otherView.newA
         print("Button Press Q: \(newQ)")
         print("Button Press A: \(newA)")
-        
-        if newQ == nil || newA == nil {
-            print("ERROR")
+        if (newQ != nil && newA != nil) {
+            // add question and answer to the arrays
+            print("Adding new elements: \(newQ) and \(newA)")
+            questions += [newQ]
+            answers += [newA]
+            // have function to clear the text fields
+        } else {
+            // print an error message
+        }
+        for i in questions{
+            print("Question: \(i)")
+        }
+        for i in answers{
+            print("Answer: \(i)")
         }
     }
 

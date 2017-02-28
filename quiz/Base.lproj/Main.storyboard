@@ -68,7 +68,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="161" y="72"/>
+            <point key="canvasLocation" x="160.80000000000001" y="71.514242878560722"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="OkJ-XA-6cE">
@@ -149,7 +149,7 @@
                                 <rect key="frame" x="142" y="252" width="92" height="30"/>
                                 <state key="normal" title="Add New Q/A"/>
                                 <connections>
-                                    <action selector="setQandA:" destination="6sz-Wa-6Td" eventType="touchUpInside" id="jum-O6-8R3"/>
+                                    <action selector="setQandANew:" destination="6sz-Wa-6Td" eventType="touchUpInside" id="Ccd-89-nJt"/>
                                 </connections>
                             </button>
                         </subviews>
