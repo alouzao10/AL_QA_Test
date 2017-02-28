@@ -37,9 +37,39 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        questionLabel.text = questions[currentQuestionIndex]
+        //questionLabel.text = questions[currentQuestionIndex]
     }
     
+    
+//==================================================================
+    
+    @IBOutlet var newQ: String!
+    @IBOutlet var newA: String!
+    
+    
+    @IBAction func getQuestion(_ textField: UITextField){
+        newQ = textField.text
+        print("In new Question ViewCon: \(newQ)")
+    }
+    
+    @IBAction func getAnswer(_ textField: UITextField){
+        newA = textField.text
+        print("In new Answer ViewCon: \(newA)")
+    }
+    
+    @IBAction func setQandA(_ sender: UIButton){
+
+        print("Button Press Q: \(newQ)")
+        print("Button Press A: \(newA)")
+        
+        if newQ == nil || newA == nil {
+            print("ERROR")
+        }
+    }
 
 }
+    
+
+
+
 

@@ -112,7 +112,7 @@
         <!--Add Questions-->
         <scene sceneID="lPO-XS-cf3">
             <objects>
-                <viewController id="6sz-Wa-6Td" sceneMemberID="viewController">
+                <viewController id="6sz-Wa-6Td" customClass="ViewController" customModule="QA" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2mP-ya-tjR"/>
                         <viewControllerLayoutGuide type="bottom" id="HI8-tc-ETh"/>
@@ -132,16 +132,25 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="getQuestion:" destination="6sz-Wa-6Td" eventType="editingChanged" id="b2Q-VT-JlK"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter New Answer" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3rD-KY-Rrf">
                                 <rect key="frame" x="124" y="191" width="127" height="21"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="getAnswer:" destination="6sz-Wa-6Td" eventType="editingChanged" id="oij-uf-aDi"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0z1-da-CSD">
                                 <rect key="frame" x="142" y="252" width="92" height="30"/>
                                 <state key="normal" title="Add New Q/A"/>
+                                <connections>
+                                    <action selector="setQandA:" destination="6sz-Wa-6Td" eventType="touchUpInside" id="jum-O6-8R3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
