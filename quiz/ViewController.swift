@@ -3,6 +3,7 @@
 //  quiz
 //
 //  Created by Alex Louzao on 2-28-17.
+//  Last Edit: 3-1-17
 //  Copyright © 2017 CSC. All rights reserved.
 //
 
@@ -28,12 +29,14 @@ class ViewController: UIViewController {
 
     // Made two UITextFields which will be used to grab
     // the strings the user provides for the new
-    // question and answer to be later added
+    // question and answer to be later added.
     @IBOutlet var questionField: UITextField!
     @IBOutlet var answerField: UITextField!
     
     var currentQuestionIndex: Int = 0
     
+    // Shows the next question in the array and will show new ones
+    // as they are added by the user.
     @IBAction func showNextQuestion(_ sender: UIButton) {
         //print("Question NewQ = \(q)")
         currentQuestionIndex += 1
@@ -44,6 +47,8 @@ class ViewController: UIViewController {
         answerLabel.text = "???"
     }
     
+    // Shows the answer that is connected to a specific question and will
+    // show new ones as they are added by the user.
     @IBAction func showAnswer(_ sender: UIButton) {
         //print("Answer NewA = \(a)")
         let answer: String = answers[currentQuestionIndex]
@@ -67,6 +72,20 @@ class ViewController: UIViewController {
     
 //==================================================================
     
+    // Description: This button function refers to the button within the
+    // add new question tab. Once the button is pressed it will
+    // get the strings from the question and answer text fields, and
+    // store them in the global variables q and a. It will check to see
+    // if the text fields are blank to only allow a question and answer
+    // if information is in the text fields. If both new values
+    // contain strings then they will be added to the global
+    // questions and answers arrays. It will also clear the text fields
+    // to allow more input of new questions and answers.
+    
+    // Pre: Getting strings from two different text fields and check if they 
+    // contain valid entries.
+    // Post: Adds the new question and answer to their propper arrays to then
+    // be sown within the quiz tab.
     @IBAction func setNewQandA(_ sender: UIButton){
         // Getting the new question and answer from 
         // their respected text fields which were created
@@ -83,7 +102,8 @@ class ViewController: UIViewController {
         } else {
             // If both text fields or one text field
             // is left blank an error message will appear 
-            // in the console.
+            // in the console. The display is left unchanged
+            // and nothing is added to either array.
             print("BAD INPUT")
         }
         // Loops to show the newly added question and answer
@@ -96,13 +116,15 @@ class ViewController: UIViewController {
         }
     }
     
-    // Resets the text fields to blank after a valid entry
+    // Description: Resets the text fields to blank after a valid entry
     // of a new question and answer entry.
+    
+    // Pre: The text fields contain the already entered question and answer
+    // Post: The text fields will be cleared only showing the placeholder text
     func clearFields(){
         questionField.text = ""
         answerField.text = ""
     }
-
 }
     
 
