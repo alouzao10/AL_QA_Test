@@ -60,7 +60,7 @@
                             <constraint firstItem="X2j-iw-pGG" firstAttribute="top" secondItem="020-Ts-mmh" secondAttribute="bottom" constant="8" id="mri-t5-mdd"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Quiz" id="He2-qW-rRj"/>
+                    <tabBarItem key="tabBarItem" title="Quiz" image="QuizTab" id="He2-qW-rRj"/>
                     <connections>
                         <outlet property="answerLabel" destination="F2M-Pa-fm2" id="FgM-KG-mpB"/>
                         <outlet property="questionLabel" destination="020-Ts-mmh" id="gII-ER-AIU"/>
@@ -95,9 +95,14 @@
                                     <segue destination="UMj-4Q-zbt" kind="modal" id="YWF-ng-PSv"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="X6k-ck-Tdy">
+                                <rect key="frame" x="117" y="270" width="140" height="127"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.77517081514345798" blue="0.40350684739683362" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="X6k-ck-Tdy" firstAttribute="centerX" secondItem="UrG-Ep-tRF" secondAttribute="centerX" id="3xC-YG-Ta8"/>
+                            <constraint firstItem="X6k-ck-Tdy" firstAttribute="top" secondItem="Obn-4c-lrk" secondAttribute="bottom" constant="82" id="Eme-5M-xbJ"/>
                             <constraint firstItem="Obn-4c-lrk" firstAttribute="centerX" secondItem="UrG-Ep-tRF" secondAttribute="centerX" id="KSS-qn-Ayq"/>
                             <constraint firstItem="Obn-4c-lrk" firstAttribute="top" secondItem="aSJ-Rc-6ej" secondAttribute="bottom" constant="57" id="PSO-Ke-ITS"/>
                             <constraint firstItem="aSJ-Rc-6ej" firstAttribute="centerX" secondItem="UrG-Ep-tRF" secondAttribute="centerX" id="dct-ET-mMq"/>
@@ -107,7 +112,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H6R-xC-Qa5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-808.5" y="-51.5"/>
+            <point key="canvasLocation" x="-808.79999999999995" y="-51.724137931034484"/>
         </scene>
         <!--Add Questions-->
         <scene sceneID="lPO-XS-cf3">
@@ -188,4 +193,8 @@
             <point key="canvasLocation" x="-807" y="777"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Logo" width="140" height="127"/>
+        <image name="QuizTab" width="48" height="32"/>
+    </resources>
 </document>
