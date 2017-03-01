@@ -1,4 +1,4 @@
-//
+/*
 //  newQuestionAnswer.swift
 //  QA
 //
@@ -62,4 +62,4 @@ class newQuestionAnswer: UIViewController{
     }
     
     
-}
+}*/

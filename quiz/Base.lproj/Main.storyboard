@@ -164,7 +164,7 @@
                             <constraint firstItem="rn9-Dg-EiH" firstAttribute="centerX" secondItem="dCv-XQ-4gA" secondAttribute="centerX" id="yd8-Ti-h4D"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Add Questions" id="oMz-OH-DqJ"/>
+                    <tabBarItem key="tabBarItem" title="Add Questions" image="NewQATab" id="oMz-OH-DqJ"/>
                     <connections>
                         <outlet property="answerField" destination="3rD-KY-Rrf" id="ktp-WB-unK"/>
                         <outlet property="questionField" destination="rn9-Dg-EiH" id="cJK-nr-u9n"/>
@@ -195,6 +195,7 @@
     </scenes>
     <resources>
         <image name="Logo" width="140" height="127"/>
-        <image name="QuizTab" width="48" height="32"/>
+        <image name="NewQATab" width="15" height="15"/>
+        <image name="QuizTab" width="15" height="15"/>
     </resources>
 </document>
