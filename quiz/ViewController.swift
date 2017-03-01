@@ -58,7 +58,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Printing the original set of questions and answers
-        // in the array before new additions
+        // in the array before new additions are made to the arrays
         print("Original Questions:")
         for i in questions{
             print("\(i)")
