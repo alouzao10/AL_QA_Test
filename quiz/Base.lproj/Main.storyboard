@@ -132,24 +132,18 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="getQuestion:" destination="6sz-Wa-6Td" eventType="editingChanged" id="b2Q-VT-JlK"/>
-                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter New Answer" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3rD-KY-Rrf">
                                 <rect key="frame" x="124" y="191" width="127" height="21"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="getAnswer:" destination="6sz-Wa-6Td" eventType="editingChanged" id="oij-uf-aDi"/>
-                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0z1-da-CSD">
                                 <rect key="frame" x="142" y="252" width="92" height="30"/>
                                 <state key="normal" title="Add New Q/A"/>
                                 <connections>
-                                    <action selector="setQandANew:" destination="6sz-Wa-6Td" eventType="touchUpInside" id="Ccd-89-nJt"/>
+                                    <action selector="setNewQandA:" destination="6sz-Wa-6Td" eventType="touchUpInside" id="ccm-nP-ELS"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -166,6 +160,10 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Add Questions" id="oMz-OH-DqJ"/>
+                    <connections>
+                        <outlet property="answerField" destination="3rD-KY-Rrf" id="ktp-WB-unK"/>
+                        <outlet property="questionField" destination="rn9-Dg-EiH" id="cJK-nr-u9n"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5t5-CJ-PV4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
